@@ -2,10 +2,10 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://Spantree.github.io
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://spantree.github.io
+title: Spantree's Blog
+subtitle: Technical musings
+author: Spantree
 simple_search: http://google.com/search
 description:
 
