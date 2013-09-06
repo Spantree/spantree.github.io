@@ -29,12 +29,11 @@ Google has continued to upgrade it over the years, both directly and via the upg
 Structured vs Unstructured Data
 -------------------------
 
-In determining which solution is right for the problem, one should consider if the problem is best modeled as structured vs unstructured data. Structured data is data that naturally fits a hierarchical structure. Data represented by JSON, XML, or relational databases typically fits the requirements. A concrete example is an employee database, which would have several different fields, e.g. firstName, lastName, department, etc. It is possible to go several layers deeper, e.g. each department has its own description, employees have lists of skills, etc.
+The two products primarily differ in the way they represent the data.  The GSA works with web pages and other documents which are essentially composed of flat text.  On the other hand, Elasticsearch documents are JSON objects with a nested hierarchy, which are useful for indexing data that has a lot of inherent structure.
 
+As an example, you can think of two types of data sources.  One is a database of employees at a company and the other is a site full of employee biographies.  If the employee biographies are just plain text, it may be hard to determine where in the text to find an employee's name or when they started working at the company.  On the other hand, this information could be readily available in a database.  
 
-Unstructured data is made of relatively freeform text. This data could be found in flat files, or on most web pages. An example is a magazine article, which has a title, an author, an issue published, and freeform text. It's a very flat file structure.
-
-Because Elasticsearch is designed to deal primarily with documents as objects, it heavily supports structured data. On the other hand, because GSA grew out of webpage searches, which have relatively little structured data, GSA thrives with unstructured data.
+Since the GSA is a little bit of Google in your infrastructure, it is unbeatable at finding a whole document that is most relevant for a certain query.  But, since it treats documents as objects, Elasticsearch shines at finding some subset of a document that is most relevant for a query.  Of course, this oversimplifies things, as both solutions can be massaged into handling both kinds of data.  But it is the ease with which you can deal with one sort of data or the other that is important to keep in mind when making a decision.
 
 Ongoing Costs
 -------------------------
