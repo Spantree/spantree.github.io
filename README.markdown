@@ -1,6 +1,6 @@
-## Spantree's Blog
+# Spantree's Blog
 
-# Setup
+## Setup
 
 Octopress requires Ruby 1.9.3. To install this with RVM, do
 
@@ -18,7 +18,7 @@ gem install bundler
 bundle install
 ```
 
-# Blogging
+## Blogging
 
 In order to create a new blog post, run `rake new_post['title']`
 
@@ -28,7 +28,7 @@ It's highly recommended that one of the first things you do is add `published: f
 
 To view your changes, run `rake preview`, which will start a server at `localhost:4000` for you to view the blog.
 
-# Publishing
+## Publishing
 
 When you are ready to publish the article, change the file to say `published: true`. After that, run the following:
 
