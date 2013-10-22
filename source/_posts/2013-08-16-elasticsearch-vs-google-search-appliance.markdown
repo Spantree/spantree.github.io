@@ -3,8 +3,9 @@ layout: post
 title: "Elasticsearch vs Google Search Appliance Part 1 - Overview / History"
 date: 2013-09-04 12:00
 comments: true
+published: false
 author: Kevin Greene
-categories: elasticsearch gsa google-search-appliance
+categories: [elasticsearch, gsa, google-search-appliance, search]
 ---
 
 With the rise in popularity of Google Search Appliance and Elasticsearch, many companies are interested in the best search solution for them. At Spantree, we've been asked several times if the GSA or Elasticsearch is a better solution, and we have decided to cover the various strengths and weaknesses in a series of blog posts. While both are solid search tools which can meet most needs, they specialize in very different domains. To understand the strengths and weaknesses, it's important to note what the general philosophy of each technology is.
