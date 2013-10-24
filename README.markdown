@@ -2,6 +2,13 @@
 
 ## Setup
 
+First, install RVM
+
+```
+\curl -L https://get.rvm.io | bash -s stable --ruby
+source ~/.rvm/scripts/rvm
+```
+
 Octopress requires Ruby 1.9.3. To install this with RVM, do
 
 ```
