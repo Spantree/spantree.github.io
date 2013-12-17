@@ -3,7 +3,9 @@ layout: post
 title: "Episode 3:  TDD with Backbonejs and Mocha"
 date: 2013-12-16 20:11
 comments: true
-categories: 
+categories: [tdd, backbonejs, mocha]
+author: Roberto Guerra
+external-url: http://blog.stumblingoncode.com/posts/2013-12-13-tdd-mocha-backbone-3.html
 ---
 
 <iframe src="//player.vimeo.com/video/81719161" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
