@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Autogenerating Fake Users with Name Genie"
+title: "Autogenerating Fake Users with Name Genius"
 date: 2013-10-24 15:08
 comments: true
 published: false
@@ -30,4 +30,4 @@ people: [
 
 While this will do for a simple example, eventually it still leads to the same feeling. Not to mention you are limited to 26 names following this convention, or even less if you use the [traditional cryptographic names](http://en.wikipedia.org/wiki/Alice_and_Bob).
 
-So, we set out to fix this issue, and created [Name Genie](https://github.com/Spantree/name-genie). Name Genie is your one stop shop for generating fake users, and we plan on building out the feature set over time. Currently, you can generate names, occupations, companies, and avatars.
+So, we set out to fix this issue, and created [Name Genius](https://github.com/Spantree/name-genius). Name Genius is your one stop shop for generating fake users, and we plan on building out the feature set over time. Currently, you can generate names, occupations, companies, and avatars. We've open sourced and pushed this to Maven Central, so that anyone can easily bootstrap new users.

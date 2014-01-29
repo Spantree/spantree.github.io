@@ -21,7 +21,7 @@ One of the risks of latching on to an open source project, especially one with p
 
 Google Search Appliance
 -------------------------
-GSA was Google's extension of their own product into the business marketplace. Many businesses desired the same power and consistency that Google offers, but for their own sites and files. GSA has very much so captured the feel of a private Google, as the business that purchases it acquires the actual hardware box, which is used as the search server.
+GSA was Google's extension of their own product into the business marketplace. Many businesses desired the same power and consistency that Google offers, but for their own sites and files. GSA has very much so captured the feel of a private Google, as the business that purchases it acquires the actual hardware box, which is used as the search server. This represents the most tangible difference between Elasticsearch and GSA
 
 Because of its roots in typical Google Search, GSA focuses on full-text search. While Google immediately brings to mind standard static web pages, it can also successfully crawl files and databases on the network. This feature, combined with the same security and user management Google offers with their other products, many companies index both private and public records.
 
