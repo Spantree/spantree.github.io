@@ -63,7 +63,7 @@ describe 'Rate Calculator', ->
 ```
 
 If we step back for a moment, we can see that we might stumble on the same problem again. Consider
-a testing some part of our application that uses RateCalculator. We might have some code similar to this:
+ testing some part of our application that uses RateCalculator. We might have some code similar to this:
 
 ```coffeescript
 class RateController
