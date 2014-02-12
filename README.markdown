@@ -41,6 +41,9 @@ When you are ready to publish the article, change the file to say `published: tr
 
 `
 rake generate
+`
+
+`
 rake deploy
 `
 
