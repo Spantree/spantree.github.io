@@ -3,7 +3,7 @@ layout: post
 title: "Backbone Repository Pattern"
 date: 2014-02-03 22:10
 comments: true
-published: false
+publish: true
 author: Roberto Guerra
 categories: [backbone, promises]
 external-url: http://blog.stumblingoncode.com/posts/2014-02-04-backbone-xhr-repository-promises.html
