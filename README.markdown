@@ -39,10 +39,10 @@ To view your changes, run `rake preview`, which will start a server at `localhos
 
 When you are ready to publish the article, change the file to say `published: true`. After that, run the following:
 
-`
+```
 rake generate
 rake deploy
-`
+```
 
 This will generate your blog, copy the generated files into `_deploy/`, add them to git, commit and push them up to the master branch. 
 

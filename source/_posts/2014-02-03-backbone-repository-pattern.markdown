@@ -3,6 +3,7 @@ layout: post
 title: "Backbone Repository Pattern"
 date: 2014-02-03 22:10
 comments: true
+publish: true
 author: Roberto Guerra
 categories: [backbone, promises]
 external-url: http://blog.stumblingoncode.com/posts/2014-02-04-backbone-xhr-repository-promises.html
@@ -18,7 +19,7 @@ should only test individual indpendent units. If our test makes an external
 request, then it stops being a unit test and starts to venture into
 the realm of integration or functional tests.
 
-Lets consider the following code:
+Let's consider the following code:
 
 ```coffeescript
 class RateCalculator
