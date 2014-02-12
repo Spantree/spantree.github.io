@@ -19,7 +19,7 @@ should only test individual indpendent units. If our test makes an external
 request, then it stops being a unit test and starts to venture into
 the realm of integration or functional tests.
 
-Lets consider the following code:
+Let's consider the following code:
 
 ```coffeescript
 class RateCalculator
