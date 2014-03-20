@@ -4,7 +4,7 @@
   <title><![CDATA[Spantree's Blog]]></title>
   <link href="http://Spantree.github.io/atom.xml" rel="self"/>
   <link href="http://Spantree.github.io/"/>
-  <updated>2014-02-12T16:06:23-06:00</updated>
+  <updated>2014-03-20T10:03:37-05:00</updated>
   <id>http://Spantree.github.io/</id>
   <author>
     <name><![CDATA[Spantree]]></name>
@@ -12,6 +12,81 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Monit: The Quick Fix]]></title>
+    <link href="http://Spantree.github.io/blog/2014/03/20/monit/"/>
+    <updated>2014-03-20T09:36:00-05:00</updated>
+    <id>http://Spantree.github.io/blog/2014/03/20/monit</id>
+    <content type="html"><![CDATA[<p>Ideally, in a production system, everything works perfectly. Services never mysteriously crash, free memory is constantly available, and CPU load rarely spikes above 50%. Unfortunately, this is not always the case.</p>
+
+<p>Recently, a client was having issues with their site going down, consistently. They knew it was due to the redis service stopping, but didn&rsquo;t know how to fix it. As a result, one person was perpetually on call, waiting for the site to go down, to run a simple <code>sudo service redis restart</code>.</p>
+
+<p>While it won&rsquo;t fix all of your problems, monit will buy you time, and your sysadmins sleep.</p>
+
+<h3>Installing Monit</h3>
+
+<p>On CentOS</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># First, install the EPEL repository
+</span><span class='line'>
+</span><span class='line'>wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+</span><span class='line'>wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+</span><span class='line'>sudo rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm
+</span><span class='line'>
+</span><span class='line'>sudo yum install monit</span></code></pre></td></tr></table></div></figure>
+
+
+<p>On Ubuntu</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install monit</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This process creates a configuration file, and adds the command <code>monit</code> to the path.</p>
+
+<h3>Configuring Monit</h3>
+
+<p>Monit config files are located in different places depending on the system. Ubuntu&rsquo;s config file is located at <code>/etc/monit/monitrc</code>, whereas CentOS uses <code>/etc/monitrc</code>.</p>
+
+<p>Monit config files follow a simple structure, of the form</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>check process $processName with pidfile $pidfilePath
+</span><span class='line'>  start program = $commandToStart
+</span><span class='line'>  stop  program = $commandToStop
+</span><span class='line'>  if failed host localhost port $portNumber then restart
+</span><span class='line'>  $timeoutConditions</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As an example, below is how we have configured monit to watch redis on a CentOS box that was having memory issues, causing redis to force quit.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>check process redis-server with pidfile /var/run/redis/redis.pid
+</span><span class='line'>  start program = "/etc/init.d/redis start"
+</span><span class='line'>  stop  program = "/etc/init.d/redis stop"
+</span><span class='line'>  if failed host localhost port 6379 then restart
+</span><span class='line'>  if 5 restarts within 5 cycles then timeout</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In general, monit is a good tool to have in place. Though hopefully it is rarely needed, it prevents issues where someone is called at 3am in order to run a simple command, due to a service crash.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Backbone Repository Pattern]]></title>
